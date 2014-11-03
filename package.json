@@ -1,0 +1,25 @@
+﻿{
+  "name": "chinese-random-ip",
+  "version": "0.0.2",
+  "description": "chinese-random-ip",
+  "main": "app.js",
+  "author": {
+    "name": "taliu",
+    "email": "taliu@outlook.com"
+  },
+  "scripts": {
+    "test": "jasmine-node  test/appSpec.js"
+  },
+  "repository": {
+        "type": "git",
+        "url": "git@github.com:taliu/chinese-random-ip.git"
+   },
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+	"request":"latest"
+  },
+  "dependencies": {
+    "ip": "*"
+  }
+}
