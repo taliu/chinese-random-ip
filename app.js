@@ -25,7 +25,7 @@ function getProvinceRandomIp(provinceName){
 	var ipAddress=null;
 	if(chineseIps.hasOwnProperty(provinceName)){
 		provinceIps=chineseIps[provinceName];
-	    var item=getRandomItem(provinceIps);//获取ip地址段
+	    var item=getRandomItem(provinceIps);
 		ipAddress=getRandomIp(item.min,item.max);
 	} 
 	return ipAddress;
