@@ -1,7 +1,6 @@
 ﻿{
   "name": "chinese-random-ip",
-  "version": "0.0.2",
-  "description": "chinese-random-ip",
+  "version": "0.0.3",
   "main": "app.js",
   "author": {
     "name": "taliu",
@@ -17,9 +16,18 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "devDependencies": {
-	"request":"latest"
+	"request":"latest",
+	"jasmine-node":"latest"
   },
   "dependencies": {
     "ip": "*"
-  }
+  },
+  "description": "chinese-random-ip是一个随机生成中国IP地址的简单工具",
+  "keywords": [
+    "China",
+    "ip",
+	'random',
+    '中国'
+  ]
+   
 }

@@ -1,34 +1,17 @@
 ﻿/*
-chineseIp.json的格式：
-{
-"provinceName1":[{min:"127.0.0.1",max:"128.0.0.1"},...],
-"provinceName2":[{min:"129.0.0.1",max:"130.0.0.1"},...],
-...
-}
-*/
+ * chinese-random-ip
+ * https://github.com/taliu/chinese-random-ip
+ *
+ * Copyright (c) 2014 taliu
+ * Licensed under the MIT license.
+ */
+
 var chineseIps=require('./chineseIp.json');
 var ip = require('ip');
-/*
-getChineseIp([provinceArray|provinceName])
-
-概述
-	随机产生一个中国IP，可以通过一个可选省份列表或者省份名称来限定ip的产生范围
-参数
-	provinceArray为数组类型，是可选的，表示省份列表，用于指定ip产生范围
-	provinceName为字符串类型，是可选的，表示省份名称，用于指定ip产生范围
-返回值
-	返回一个随机的ip地址
-	如果指定的省份不存在，则返回null
-
- *有效果的省份名称：
-上海,云南,内蒙,北京,台湾,吉林,四川,天津,宁夏,安徽,山东,山西,广东,广西,新疆,江苏
-江西,河北,河南,浙江,海南,湖北,湖南,甘肃,福建,西藏,贵州,辽宁,重庆,陕西,青海,香港
-黑龙江
- * 
-*/
+//随机产生一个中国IP
 function getChineseIp(provinceArray){
 	var provinceArray=provinceArray||getProvinces(chineseIps);
-	if(!(provinceArray instanceof Array)){//是一个省的名称时
+	if(!(provinceArray instanceof Array)){
 		provinceArray=[provinceArray];
 	}
 	var provinceName=getRandomItem(provinceArray);
